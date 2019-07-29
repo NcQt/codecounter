@@ -47,7 +47,7 @@ def countLine(fname):
     for file_line in filedata.readlines():
         if file_line != '' and file_line != '\n':  # 过滤掉空行
             count += 1
-    print('%-70s ---- %-5d' % (fname, count))
+    print('%-40s ---- %-5d' % (os.path.basename(fname), count))
     return count
 
 

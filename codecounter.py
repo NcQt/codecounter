@@ -53,7 +53,7 @@ def countLine(fname):
 
 if __name__ == '__main__':
     basedir = sys.argv[1]
-    whitelist = sys.argv[2]
+    whitelist = sys.argv[2:]
 
     startTime = time.clock()
     getFile(basedir)

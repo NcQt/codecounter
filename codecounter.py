@@ -18,8 +18,6 @@ filelists = []
 # whitelist = ['m','xml']
 
 #遍历文件, 递归遍历文件夹中的所有
-
-
 def getFile(basedir):
     global filelists
     for parent, dirnames, filenames in os.walk(basedir):
@@ -32,8 +30,6 @@ def getFile(basedir):
                 filelists.append(os.path.join(parent, filename))
 
 # 统计一个文件的行数
-
-
 def countLine(fname):
     count = 0
     filedata = open(fname, 'rb')
@@ -46,8 +42,7 @@ def countLine(fname):
 
     for file_line in filedata.readlines():
         lineWithoutWhitespace = file_line.strip()
-        if lineWithoutWhitespace:
-        # if file_line != '' and file_line != '\n':  # 过滤掉空行
+        if lineWithoutWhitespace:     # 过滤掉空行
             count += 1
     print('%-40s ---- %-5d' % (os.path.basename(fname), count))
     return count
